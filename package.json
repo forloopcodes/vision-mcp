@@ -1,12 +1,25 @@
 {
-  "name": "vision-mcp",
+  "name": "@forloopcodes/visionmcp",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "description": "MCP server that proxies image analysis to OpenRouter vision models",
+  "bin": {
+    "visionmcp": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0"

@@ -53,8 +53,8 @@ The server uses stdio transport and is designed to be launched by an MCP-enabled
 {
   "mcpServers": {
     "vision-mcp": {
-      "command": "node",
-      "args": ["path/to/vision-mcp/dist/server.js"],
+      "command": "npx",
+      "args": ["-y", "@forloopcodes/visionmcp"],
       "env": {
         "OPENROUTER_API_KEY": "sk-or-v1-...",
         "OPENROUTER_MODEL": "google/gemma-4-31b-it:free"
