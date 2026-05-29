@@ -10,14 +10,13 @@ import { capture } from "./screen/index.js";
 
 function getEnv(n: string): string { const v = process.env[n]; if (!v?.trim()) throw new Error(`Missing required env: ${n}`); return v.trim(); }
 
-const cfg = {
-  apiKey: getEnv("OPENROUTER_API_KEY"),
-  model: getEnv("OPENROUTER_MODEL"),
-  baseUrl: process.env.OPENROUTER_BASE_URL?.trim() || "https://openrouter.ai/api/v1",
-  maxMb: Number(process.env.MAX_IMAGE_MB) || 20,
-};
-
 export async function start() {
+  const cfg = {
+    apiKey: getEnv("OPENROUTER_API_KEY"),
+    model: getEnv("OPENROUTER_MODEL"),
+    baseUrl: process.env.OPENROUTER_BASE_URL?.trim() || "https://openrouter.ai/api/v1",
+    maxMb: Number(process.env.MAX_IMAGE_MB) || 20,
+  };
   const server = new Server(
     { name: "vision-mcp", version: "1.0.0" },
     { capabilities: { tools: {} } },
