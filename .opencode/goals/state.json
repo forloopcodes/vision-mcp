@@ -101,7 +101,7 @@
       "objective": "make the mcp usable using npx -y visionmcp like this one puter : { type : local , command : [ npx , -y , puter-mcp ] } i will publish on npm later",
       "status": "completed",
       "createdAt": 1780056740118,
-      "updatedAt": 1780057164304,
+      "updatedAt": 1780057165537,
       "tokensUsed": 1672219,
       "timeUsedMs": 249835,
       "accountedAssistantTokens": {
